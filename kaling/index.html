@@ -1,0 +1,18 @@
+<!doctype tml>
+<html>
+<title>눌러</title>
+<head>
+    <meta charset="utf-8"/>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+</head>
+<body>
+   <a id="kakao-link-btn" href="javascript:;">
+     <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="60" height="60" style="max-width: 50%; height: auto;"> 
+   </a>
+   <p>위 이미지를 클릭하고, 아무 곳에나 보내보세요!</p>
+	<script type='text/javascript'> 
+  	  Kakao.init('5ee49c3e7232211454971e75815e8032');
+	  Kakao.Link.createCustomButton({container: '#kakao-link-btn', templateId: 65114,});
+	</script>
+</body>
+</html>
