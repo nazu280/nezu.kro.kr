@@ -1,19 +1,57 @@
 <html>
-<title>nezu.kro.kr의 사이트 목록</title>
+<title>nezu</title>
+<head>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body id="body-pd">
+<div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="/" class="nav__logo">nezu.kro.kr</a>
+                </div>
+                <div class="nav__list">
+                    <a href="/" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">home</span>
+                    </a>
+
+                    <div href="#" class="nav__link collapse">
+                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">Kakaolink</span>
+
+                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                        <ul class="collapse__menu">
+                            <a href="/custom" class="collapse__sublink">Custom1</a>
+                            <a href="/custom2" class="collapse__sublink">custom2</a>
+                            <a href="/kaling" class="collapse__sublink">Kaling</a>
+                        </ul>
+                    </div>
+
+                    <div href="#" class="nav__link collapse">
+                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">All</span>
+
+                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                        <ul class="collapse__menu">
+                            <a href="#" class="collapse__sublink">nezugyo</a>
+                            <a href="#" class="collapse__sublink">Blog</a>
+                        </ul>
+                   </div>
+            </div>
+        </nav>
+    </div>
 <center>
-<h1>nezu.kro.kr 사이트 목록</h1>
-<a href='../re'>nezu.kro.kr/re</a><br>
-<a href='../re'>nezu.kro.kr/url</a><br>
-<p>"nezu.kro.kr/url/url, "nezu.kro.kr/re/?링크" 를 통해 링크나 scheme에 리디렉션할 수 있습니다.</p>
-<p>단순히 위 링크에 접속한다고 실행되지 않습니다.</p>
-<p>url은 re를 보완한 버전입니다.</p><br><br>
-<a href='https://blog.nezu.kro.kr' target='_blank'>blog.nezu.kro.kr</a><br>
-<p>아무 내용이나 올리는 블로그입니다.</p><br><br>
-<a href='https://gyo.nezu.kro.kr' target='_blank'>gyo.nezu.kro.kr</a><br>
-<p>네즈를 찬양하는 가상 종교입니다. 심심하실 때 오시면 더 심심해지실 수 있습니다.</p><br><br>
-<a href='../kaling'>nezu.kro.kr/kaling</a><br>
-<p>끝없는 반복의 굴레</p><br>
-<a href='../'>nezu.kro.kr</a><br>
-<p>나만의 카카오링크를 간편하게 커스텀하여 공유할 수 있습니다.</p>
+<h2>커스텀 카카오링크 생성기 목록</h2><hr>
+<a href='http://custom.nezu.kro.kr' target='_blank'><h1>커스텀 카카오링크 생성기 1</h1></a>
+<p>제목, 설명, 사진을 커스텀하는 대신 적을 수 있는 글자 수가 제한됩니다.</p><br>
+<a href='http://custom2.nezu.kro.kr' target='_blank'><h1>커스텀 카카오링크 생성기 2</h1></a>
+<p>제목만을 커스텀 할 수 있는 대신 적을 수 있는 글자 수가 200자로 늘어납니다.</p>
 </center>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
