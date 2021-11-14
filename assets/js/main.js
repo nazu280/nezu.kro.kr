@@ -24,7 +24,7 @@ function colorLink() {
 linkColor.forEach(l=> l.addEventListener('click', colorLink))
 
 /* COLLAPSE MENU */
-const linkCollapse = document.getElementsByClassName('nav__link collapse')
+const linkCollapse = document.getElementsByClassName('collapse__link')
 var i
 
 for(i=0;i<linkCollapse.length;i++) {
