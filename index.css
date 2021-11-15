@@ -66,5 +66,9 @@
        background-size: cover;
        background-color: #333333;color: white;
        position: absolute;z-index: 1;
-     }
+      }
+      .main {
+       text-align: center;
+      
+      }
     </style> 
