@@ -68,6 +68,8 @@
        position: absolute;z-index: 1;
       }
       .main {
-       text-align: left;
+       text-align: center;
+       a:link { color: #bbccee; text-decoration: none;}   
+       a:visited { color: #bbccee; text-decoration: none;}
       }
     </style> 
