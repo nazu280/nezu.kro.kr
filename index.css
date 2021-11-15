@@ -69,7 +69,8 @@
       }
       .main {
        text-align: center;
-       a:link { color: #bbccee;}	
-       a:visited { color: #bbccee;}
+      }
+      .main a:hover {
+       color: #bbccee;
       }
     </style> 
