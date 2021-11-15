@@ -68,9 +68,6 @@
        position: absolute;z-index: 1;
       }
       .main {
-       text-align: center;
-      }
-      .main a:hover {
-       color: #bbccee;
+       text-align: left;
       }
     </style> 
