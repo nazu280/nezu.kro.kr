@@ -69,6 +69,9 @@
       }
       .main {
        text-align: center;
-      
+       a:link {text-decoration: none; color: #bbccee;}
+       a:visited {text-decoration: none; color: #bbccee;}
+       a:active {text-decoration: none; color: #bbccee;}
+       a:hover {text-decoration: underline; color: #bbccee;}
       }
     </style> 
