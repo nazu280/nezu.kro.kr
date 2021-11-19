@@ -29,11 +29,7 @@ html, body {
 }
 
 .h-left {
-    width: 200px;
     padding-right: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-weight: bold;
 }
 
