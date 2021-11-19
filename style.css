@@ -105,7 +105,7 @@ html.dark {
   justify-content: center;
 }
 
-.toggleTheme {
+#toggleTheme {
   width: 140px;
   height: 45px;
   font-family: 'Roboto', sans-serif;
@@ -123,7 +123,7 @@ html.dark {
   outline: none;
   }
 
-.toggleTheme:hover {
+#toggleTheme:hover {
   background-color: #2EE59D;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
