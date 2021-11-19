@@ -74,19 +74,6 @@ a {
     text-decoration-line: none;
 }
 
-a:link {
-  color : red;
-}
-a:visited {
-  color : red;
-}
-a:hover {
-  color : red;
-}
-a:active {
-  color : blue;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
 }
