@@ -51,6 +51,10 @@ html, body {
     text-align: center;
 }
 
+.site {
+	height: 100%;
+}
+
 .card {
 	height: 200px;
 	width: 300px;
