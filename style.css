@@ -90,17 +90,7 @@ html {
 }
 
 html.dark {
-  animation-duration: 1s;
-  animation-name: dark;
+  background: #121212;
+  color: #bbb;
 }
 
-@keyframes dark {
- from {
-   background: #fff;
-   color: #000;
- } 
- to {
-   background: #121212;
-   color: #bbb;
- }
-}
