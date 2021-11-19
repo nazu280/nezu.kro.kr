@@ -98,3 +98,18 @@ html.dark {
   color: #bbb;
 }
 
+.menu-a {
+	border: 1px solid #607596;
+	background-color: rgba(0,0,0,0);
+	color: #607596;
+	padding: 5px;
+	border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+}
+
+.h-left {
+	color: white;
+        background-color: #98b5e3;
+}
