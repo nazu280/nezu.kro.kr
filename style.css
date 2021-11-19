@@ -108,8 +108,3 @@ html.dark {
 	border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
 }
-
-.h-left button:hover {
-	color: white;
-        background-color: #98b5e3;
-}
