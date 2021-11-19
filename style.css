@@ -75,16 +75,16 @@ a {
 }
 
 a:link {
-  color : #BBCCEE;
+  color : red;
 }
 a:visited {
-  color : #BBCCEE;
+  color : red;
 }
 a:hover {
-  color : #8FA8DB;
+  color : red;
 }
 a:active {
-  color : #8FA8DB;
+  color : blue;
 }
 
 ::-webkit-scrollbar {
