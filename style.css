@@ -90,7 +90,7 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  .main {
+  html {
     background: #121212;
     color: #bbb;
   }
