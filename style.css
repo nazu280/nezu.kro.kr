@@ -29,7 +29,11 @@ html, body {
 }
 
 .h-left {
-    padding-left: 25px;
+    width: 200px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-weight: bold;
 }
 
@@ -39,10 +43,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.menu1:hover, .menu2:hover, .menu3:hover {
-    color: white;
 }
 
 .main {
