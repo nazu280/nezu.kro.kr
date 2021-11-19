@@ -16,7 +16,6 @@ html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    text-decoration-line: none;
 }
 
 .header {
@@ -63,4 +62,8 @@ html, body {
 
 .card-text {
     text-align: center;
+}
+
+a {
+    text-decoration-line: none;
 }
