@@ -109,7 +109,7 @@ html.dark {
         border-bottom-right-radius: 5px;
 }
 
-.h-left {
+.h-left button:hover {
 	color: white;
         background-color: #98b5e3;
 }
