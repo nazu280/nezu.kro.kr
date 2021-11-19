@@ -74,8 +74,17 @@ a {
     text-decoration-line: none;
 }
 
+a:link {
+  color : #BBCCEE;
+}
+a:visited {
+  color : #BBCCEE;
+}
 a:hover {
-  color : #8fa8db;
+  color : #8FA8DB;
+}
+a:active {
+  color : #8FA8DB;
 }
 
 ::-webkit-scrollbar {
