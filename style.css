@@ -74,6 +74,10 @@ a {
     text-decoration-line: none;
 }
 
+a:hover {
+  color : #8fa8db;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
