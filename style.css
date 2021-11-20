@@ -22,6 +22,8 @@ html, body {
 .container{
     position: fixed;
     text-align: center;
+    right: 20px;
+    bottom:20px;
 }
 /*body{
     height: 100vh;
@@ -39,10 +41,16 @@ html, body {
     width: fit-content;
     height: fit-content;
     text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom:20px;
 }
 .moon{
     position: absolute;
     inset: 0;
+    position: fixed;
+    right: 20px;
+    bottom:20px;
 }
 .moon-logo{
     opacity: 0;
