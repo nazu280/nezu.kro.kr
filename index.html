@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NEZU.kro.kr</title>
         <link rel="stylesheet" href="style.css" media="(prefers-color-scheme: dark)">
-        <link href="toastr.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
         <meta name="description" content="NEZU 메인 페이지">
     </head>
@@ -36,7 +37,7 @@
     </div>
                 <h2>NEZU.kro.kr</h2>
                 <div class="card">
-                    <div class="card-text">해당 기기의 아이피 주소<br><span class="copy-ip" id="client-ip"></span><br><a href="javascript:copyip();">복사하기</a><br><br>현재 시각<br><div style="text-align: center;"><span id="apm"></span> <span id="clock"></span></div></div>
+                    <div class="card-text">해당 기기의 아이피 주소<br><span class="copy-ip" id="client-ip"></span><br><a href="javascript:copyip();" id="copy-ip">복사하기</a><br><br>현재 시각<br><div style="text-align: center;"><span id="apm"></span> <span id="clock"></span></div></div>
                 </div>
                 <div class="card">
                     <div class="card-text"><a href='https://nezu.kro.kr/re' target='_blank'>re</a><br><a href='https://nezu.kro.kr/url' target='_blank'>url</a><p>"nezu.kro.kr/re/?링크"<br>"nezu.kro.kr/url/?링크" 를 통해 링크나 scheme에 리디렉션할 수 있습니다.</p></div>
@@ -50,8 +51,12 @@
                 <div id="toast"></div>
             </div>
         </div>
+        <script type="text/javascript">
+    	    $('#copy-ip').on('click', function(){
+		        toastr.success('복사 성공');
+	        });
+        </script>
         <script type="text/javascript" src="nezu.js"></script>
-        <script src="jquery-3.1.1.min.js"></script>
-        <script src="toastr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </body>
 </html>
