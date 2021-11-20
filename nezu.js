@@ -44,3 +44,8 @@ document.body.removeChild(se);
 function callback(data) {
     document.getElementById('client-ip').textContent = data.ip;
 }
+
+function copyip() {
+    var ip = document.querySelector('.copy-ip');
+    navigator.clipboard.writeText(ip.textContent)
+}
