@@ -36,20 +36,6 @@ function clock() {
 clock();
 setInterval(clock, 1000);
 
-const se = document.createElement('script');
-se.src = 'https://ipinfo.io?callback=callback';
-document.body.appendChild(se);
-document.body.removeChild(se);
-
-function callback(data) {
-    document.getElementById('client-ip').textContent = data.ip;
-}
-
-function copyip() {
-    var ip = document.querySelector('.copy-ip');
-    navigator.clipboard.writeText(ip.textContent)
-}
-
 let removeToast;
 
 function toast(string) {
@@ -64,4 +50,19 @@ function toast(string) {
         }, 1000)
     toast.classList.add("reveal"),
         toast.innerText = string
+}
+
+const se = document.createElement('script');
+se.src = 'https://ipinfo.io?callback=callback';
+document.body.appendChild(se);
+document.body.removeChild(se);
+
+function callback(data) {
+    document.getElementById('client-ip').textContent = data.ip;
+}
+
+function copyip() {
+    var ip = document.querySelector('.copy-ip');
+    navigator.clipboard.writeText(ip.textContent)
+    toast('복사 완료')
 }
