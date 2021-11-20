@@ -20,8 +20,6 @@ html, body {
 
 .container{
     position: relative;
-    top: 200px;
-    right: 100px;
 }
 body{
     height: 100vh;
@@ -35,9 +33,11 @@ body{
     color: #ffffff;
 }
 .sun, .moon{
-    font-size: 10rem;
+    font-size: 7rem;
     width: fit-content;
     height: fit-content;
+    top:200px;
+    right:100px;
 }
 .moon{
     position: absolute;
