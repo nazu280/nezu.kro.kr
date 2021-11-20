@@ -53,8 +53,25 @@
         </div>
         <script type="text/javascript">
     	    $('#copy-ip').on('click', function(){
-		        toastr.success('복사 성공');
-	        });
+		toastr.options = {
+  			"closeButton": false,
+  			"debug": false,
+  			"newestOnTop": false,
+  			"progressBar": true,
+  			"positionClass": "toast-top-right",
+  			"preventDuplicates": false,
+  			"onclick": null,
+  			"showDuration": "300",
+  			"hideDuration": "1000",
+  			"timeOut": "3000",
+  			"extendedTimeOut": "1000",
+  			"showEasing": "swing",
+  			"hideEasing": "linear",
+  			"showMethod": "fadeIn",
+  			"hideMethod": "fadeOut"
+		}        
+            	toastr.success('복사 성공');
+	    });
         </script>
         <script type="text/javascript" src="nezu.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
