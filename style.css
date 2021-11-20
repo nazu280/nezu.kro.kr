@@ -74,6 +74,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
 }
 
 .h-left {
