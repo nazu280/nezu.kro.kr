@@ -21,8 +21,7 @@ html, body {
 
 .container{
     position: fixed;
-    right: 20px;
-    bottom:20px;
+    text-align: center;
 }
 /*body{
     height: 100vh;
@@ -39,6 +38,7 @@ html, body {
     font-size: 7rem;
     width: fit-content;
     height: fit-content;
+    text-align: center;
 }
 .moon{
     position: absolute;
@@ -79,7 +79,6 @@ html, body {
     justify-content: space-between;
     position: absolute;
     top: 0px;
-    z-index: 1;
 }
 
 .h-left {
