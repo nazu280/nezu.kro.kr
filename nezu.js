@@ -50,6 +50,7 @@ function callback(data) {
 function copyip() {
     var ip = document.querySelector('.copy-ip');
     navigator.clipboard.writeText(ip.textContent)
+    showToast("복사 성공");
 }
 
 var msgTimer = 0;
