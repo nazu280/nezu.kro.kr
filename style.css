@@ -16,18 +16,21 @@ html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    transition: background-color 1s;
 }
 
 .container{
-    position: relative;
+    position: fixed;
+    right: 20px;
+    bottom:20px;
 }
-body{
+/*body{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 1s;
-}
+}*/
 .dark{
     background-color: #242424;
     color: #ffffff;
@@ -36,8 +39,6 @@ body{
     font-size: 7rem;
     width: fit-content;
     height: fit-content;
-    top:200px;
-    right:100px;
 }
 .moon{
     position: absolute;
