@@ -51,3 +51,38 @@ function copyip() {
     var ip = document.querySelector('.copy-ip');
     navigator.clipboard.writeText(ip.textContent)
 }
+
+var msgTimer = 0;
+function showToast(msg, slot) {
+    clearToast();
+
+    var toast = $('#toast');
+
+    if(slot == 'top') {
+        toast.css('top', '33px');
+        toast.css('bottom', '');
+    } else if(slot == 'bottom') {
+        toast.css('top', '');
+        toast.css('bottom', '-13px');
+    } else {
+        toast.css('top', '50%');
+        toast.css('bottom', '');
+    }
+
+    toast.children().html(msg);
+    setTimeout(function() {
+        toast.fadeIn(500, function() {
+            msgTimer = setTimeout(function() {
+                toast.fadeOut(500);
+            }, 1000);
+        });
+    }, 200);
+}
+    
+function clearToast() {
+    if(msgTimer != 0) {
+        clearTimeout(msgTimer);
+        msgTimer = 0;
+    }
+}
+
