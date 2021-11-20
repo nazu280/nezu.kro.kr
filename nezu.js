@@ -64,5 +64,4 @@ function callback(data) {
 function copyip() {
     var ip = document.querySelector('.copy-ip');
     navigator.clipboard.writeText(ip.textContent)
-    toast('복사 완료')
 }
