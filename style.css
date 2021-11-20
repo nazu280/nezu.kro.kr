@@ -91,7 +91,6 @@ html {
 }
 
 html.dark {
-  transition: .5s background;
   background: #121212;
   color: #bbb;
 }
