@@ -22,7 +22,6 @@ html, body {
 .container{
     position: fixed;
     text-align: center;
-    margin-left: 100%;
     margin-top: 20px;
 }
 /*body{
