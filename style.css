@@ -79,7 +79,7 @@ html, body {
     justify-content: space-between;
     position: absolute;
     top: 0px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .h-left {
@@ -128,6 +128,7 @@ a {
 
 ::-webkit-scrollbar {
   width: 10px;
+  z-index: 1;
 }
  
 ::-webkit-scrollbar-track {
@@ -138,7 +139,6 @@ a {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#c2e59c, #64b3f4);
   border-radius: 5px;
-  heigth: 80%
 }
 
 /* html {
