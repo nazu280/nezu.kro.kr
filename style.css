@@ -29,7 +29,7 @@ body{
     transition: background-color 1s;
 }
 .dark{
-    background-color: #343434;
+    background-color: #242424;
     color: #ffffff;
 }
 .sun, .moon{
