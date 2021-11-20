@@ -79,6 +79,7 @@ html, body {
     justify-content: space-between;
     position: absolute;
     top: 0px;
+    z-index: 1;
 }
 
 .h-left {
