@@ -26,7 +26,7 @@ function callback(data) {
 
 function copyToClipBoard() {
 
-    var content = data.ip;
+    var content.textContent = data.ip;
     
     content.select();
     document.execCommand('copy');
