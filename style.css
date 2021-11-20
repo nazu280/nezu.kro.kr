@@ -96,3 +96,9 @@ html.dark {
   color: #bbb;
 }
 
+html.dark2 {
+  transition: .5s background;
+  background: #fff;
+  color: #343434;
+}
+
