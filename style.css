@@ -86,7 +86,7 @@ a {
   border-radius: 5px;
 }
 
-/*html {
+html {
   color: #343434;
 }
 
@@ -94,15 +94,3 @@ html.dark {
   background: #121212;
   color: #bbb;
 }
-*/
-
-.toggleTheme {
-  transition: 0.3s ease all;
-  display: block;
-  text-align: center;
-  position: fixed;
-  cursor: pointer;
-  width: $button-width;
-  height: $button-height;
-  box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.2);
-
