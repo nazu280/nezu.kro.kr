@@ -151,4 +151,66 @@ html.dark {
   color: #bbb;
 } */
 
+#toast {
+  position: fixed;
+  min-width: 150px;
+  bottom: 50px;
+  right: 10px;
+  text-align: right;
+}
 
+#toast .toastWrap {
+  margin: 6px 0 0;
+  padding: 18px 0 15px;
+  display: none;
+}
+
+.toast {
+  border: 1px solid #F1D031;
+  color: #444;
+  background: #FFFFA3;
+  box-shadow: 0 2px 3px #999;
+  padding: 18px 20px 15px 8px;
+  text-align: left;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-family: arial;
+  font-size: 13px;
+  white-space: pre;
+  position: relative;
+}
+
+#toast b {
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  font: normal 12px/1 Arial, sans-serif;
+  text-align: right;
+  cursor: pointer;
+  text-shadow: #FFF 0 1px 0;
+}
+
+#toast b:before {
+  content: "\2716";
+}
+
+.timerWrap {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.timer {
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: #F1D031;
+}
