@@ -34,7 +34,8 @@ body{
     transition: background-color 1s;
 }
 .dark{
-    background-color: black;
+    background-color: #343434;
+    color: #fff;
 }
 .sun, .moon{
     font-size: 10rem;
