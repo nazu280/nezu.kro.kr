@@ -22,8 +22,6 @@ html, body {
 .container{
     position: fixed;
     text-align: center;
-    right: 20px;
-    bottom:20px;
 }
 /*body{
     height: 100vh;
@@ -41,32 +39,20 @@ html, body {
     width: fit-content;
     height: fit-content;
     text-align: center;
-    position: fixed;
-    right: 20px;
-    bottom:20px;
 }
 .moon{
     position: absolute;
     inset: 0;
-    position: fixed;
-    right: 20px;
-    bottom:20px;
 }
 .moon-logo{
     opacity: 0;
     transform: translateY(20%) rotateZ(50deg);
     transition: all 1s ease-out;
-    position: fixed;
-    right: 20px;
-    bottom:20px;
 }
 .sun-logo{
     opacity: 1;
     transform: translateY(0) rotateZ(0deg);
     transition: all 1s ease-out;
-    position: fixed;
-    right: 20px;
-    bottom:20px;
 }
 .animate-sun{
     opacity: 0;
@@ -141,7 +127,6 @@ a {
 
 ::-webkit-scrollbar {
   width: 10px;
-  height: 80%;
 }
  
 ::-webkit-scrollbar-track {
