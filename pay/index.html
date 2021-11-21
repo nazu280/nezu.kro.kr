@@ -29,9 +29,9 @@
   function kakaoShare() {
     Kakao.Link.sendCustom({
         templateId: 65599,
-        content: {
+        templateArgs: {
             t: t.value + "원을 받으세요."
             }
-        });
+        },'custom');
   }
 </script>
