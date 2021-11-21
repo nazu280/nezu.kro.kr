@@ -83,6 +83,10 @@ html, body {
     z-index: 2;
 }
 
+.header a {
+    color: ffffff;
+}
+
 .h-left {
     padding-left: 25px;
     font-weight: bold;
@@ -116,7 +120,7 @@ html, body {
 }
 
 .card a {
-	color: #98b5e3
+	color: #98b5e3;
 }
 
 .card-text {
