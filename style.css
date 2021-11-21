@@ -83,7 +83,7 @@ html, body {
     z-index: 2;
 }
 
-.header a {
+.header .h-right a {
     color: #ffffff;
 }
 
