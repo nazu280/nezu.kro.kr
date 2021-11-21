@@ -123,6 +123,10 @@ html, body {
 	color: #98b5e3;
 }
 
+.card a:hover {
+	color: #607596;
+}
+
 .card-text {
     text-align: center;
     position: absolute;
