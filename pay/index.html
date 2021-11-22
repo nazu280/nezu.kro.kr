@@ -9,8 +9,8 @@
     <form>
         <input type="number" placeholder="금액" id="title" name="tt"></input>
         <input type="number" placeholder="기타" id="title2" name="tt2"></input>
-        <input type="radio" name="radio" value="1" onClick="active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
-        <input type="radio" name="radio" value="2" onClick="disable();">기타로 설정 (예: [값] 받으세요.)
+        <input type="radio" name="radio" id="r1" value="1" onClick="active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
+        <input type="radio" name="radio" id="r2" value="2" onClick="disable();">기타로 설정 (예: [값] 받으세요.)
     </form>
     <h3>낚시할 금액을 적고, 카카오톡 아이콘을 눌러주세요</h3>
     <p>친구에게 당하셨다구요? 나만 당할 순 없지! 다른 친구를 낚아보세요!</p>
@@ -23,8 +23,10 @@
 
  var tit1 = document.getElementById('title');
  var tit2 = document.getElementById('title2');
- var t1Result = tit1.getAttribute("checked");
- var t2Result = tit2.getAttribute("checked");
+ var ra1 = document.getElementById('r1');
+ var ra2 = document.getElementById('r2');
+ var t1Result = ra1.getAttribute("checked");
+ var t2Result = ra2.getAttribute("checked");
 
  const option = {
   maximumFractionDigits: 4
