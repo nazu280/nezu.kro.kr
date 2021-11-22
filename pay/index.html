@@ -3,11 +3,14 @@
 <meta property="og:title" content="카카오톡 송금하기 낚시" />
 <meta property="og:description" content="원하는 가격으로 송금하기 낚시를 해보세요!" />
 <body>
-    <a id="kakao-link-btn" href="javascript:kakaoShare()">
+    <a id="kakao-link-btn" href="javascript:kakaoShare1()">
     	<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120">
     </a><hr>
     <form>
-        <textarea placeholder="금액" rows="10" id="title" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'></textarea>
+        <textarea placeholder="금액" rows="10" id="title" name="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'></textarea>
+        <textarea placeholder="기타" rows="10" id="title2"></textarea>
+        <input type="radio" name="radio" value="1" onClick="javascript_:active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
+        <input type="radio" name="radio" value="2" onClick="javascript_:disable();">기타로 설정 (예: [값] 받으세요.)
     </form>
     <h3>낚시할 금액을 적고, 카카오톡 아이콘을 눌러주세요</h3>
     <p>친구에게 당하셨다구요? 나만 당할 순 없지! 다른 친구를 낚아보세요!</p>
@@ -19,18 +22,38 @@
 <script type="text/javascript">
 
  var t=document.getElementById("title");
-
+    
+ const option = {
+  maximumFractionDigits: 4
+ };
+ 
+ const t1 = 
+    t.value.toLocaleString('ko-KR', option);
+ const t2 =
+    t1 + "원을 받으세요."
+ 
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('5ee49c3e7232211454971e75815e8032');
 
   // SDK 초기화 여부를 판단합니다.
   console.log(Kakao.isInitialized());
+ 
+  function active(){
+    document.form.text.disabled = false;
+  }
+  function disable(){
+    document.form.text.disabled = true;
+  }
 
+
+
+출처: https://iameleven.tistory.com/20 [아임일레븐]
+  
   function kakaoShare() {
     Kakao.Link.sendCustom({
         templateId: 65599,
         templateArgs: {
-            t: t.value + "원을 받으세요."
+            t: t1 + "원을 받으세요."
             }
         },'custom');
   }
