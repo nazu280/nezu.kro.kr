@@ -7,10 +7,10 @@
     	<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120">
     </a><hr>
     <form>
-        <textarea placeholder="금액" rows="10" id="title" name="title" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'></textarea>
-        <textarea placeholder="기타" rows="10" id="title2" name="title2"></textarea>
-        <input type="radio" name="radio" value="1" onClick="javascript_:active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
-        <input type="radio" name="radio" value="2" onClick="javascript_:disable();">기타로 설정 (예: [값] 받으세요.)
+        <input type="number" placeholder="금액" id="title" name="title"></input>
+        <input type="number" placeholder="기타" id="title2" name="title2"></input>
+        <input type="radio" name="radio" value="1" onClick="javascript:active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
+        <input type="radio" name="radio" value="2" onClick="javascript:disable();">기타로 설정 (예: [값] 받으세요.)
     </form>
     <h3>낚시할 금액을 적고, 카카오톡 아이콘을 눌러주세요</h3>
     <p>친구에게 당하셨다구요? 나만 당할 순 없지! 다른 친구를 낚아보세요!</p>
@@ -68,22 +68,4 @@
                 }
         },'custom');
     }
- 
-function onlyNumber(event){
-    event = event || window.event;
-    var keyID = (event.which) ? event.which : event.keyCode;
-    if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
-        return;
-    else
-        return false;
-}
- 
-function removeChar(event) {
-    event = event || window.event;
-    var keyID = (event.which) ? event.which : event.keyCode;
-    if ( keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
-        return;
-    else
-        event.target.value = event.target.value.replace(/[^0-9]/g, "");
-}
 </script>
