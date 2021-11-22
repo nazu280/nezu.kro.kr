@@ -7,8 +7,8 @@
     	<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120">
     </a><hr>
     <form>
-        <textarea placeholder="금액" rows="10" id="title" name="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'></textarea>
-        <textarea placeholder="기타" rows="10" id="title2"></textarea>
+        <textarea placeholder="금액" rows="10" id="title" name="title" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'></textarea>
+        <textarea placeholder="기타" rows="10" id="title2" name="title2"></textarea>
         <input type="radio" name="radio" value="1" onClick="javascript_:active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
         <input type="radio" name="radio" value="2" onClick="javascript_:disable();">기타로 설정 (예: [값] 받으세요.)
     </form>
@@ -21,16 +21,20 @@
 
 <script type="text/javascript">
 
- var t=document.getElementById("title");
-    
+ var tit1 = document.getElementById('title');
+ var tit2 = document.getElementById('title2');
+ var t1Result = tit1.getAttribute("checked")
+ var t2Result = tit2.getAttribute("checked")
+
  const option = {
   maximumFractionDigits: 4
  };
- 
- const t1 = 
-    t.value.toLocaleString('ko-KR', option);
+ const t1 =  
+    tit1.value.toLocaleString('ko-KR', option);
  const t2 =
     t1 + "원을 받으세요."
+ const t3 =  
+    tit2.value + " 받으세요."
  
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('5ee49c3e7232211454971e75815e8032');
@@ -39,24 +43,31 @@
   console.log(Kakao.isInitialized());
  
   function active(){
-    document.form.text.disabled = false;
+    document.form.title.disabled = false;
+    document.form.title2.disabled = true;
   }
   function disable(){
-    document.form.text.disabled = true;
+    document.form.title.disabled = true;
+    document.form.title2.disabled = false;
   }
-
-
-
-출처: https://iameleven.tistory.com/20 [아임일레븐]
   
   function kakaoShare() {
-    Kakao.Link.sendCustom({
-        templateId: 65599,
-        templateArgs: {
-            t: t1 + "원을 받으세요."
-            }
+    if(t1Result == true) {
+        Kakao.Link.sendCustom({
+            templateId: 65599,
+            templateArgs: {
+                t: t2
+                }
         },'custom');
-  }
+    }
+    if(t2Result == true) {
+        Kakao.Link.sendCustom({
+            templateId: 65599,
+            templateArgs: {
+                t: t3
+                }
+        },'custom');
+    }
  
 function onlyNumber(event){
     event = event || window.event;
