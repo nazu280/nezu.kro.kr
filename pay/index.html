@@ -7,13 +7,10 @@
     	<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120">
     </a><hr>
     <form>
-        <input type="number" placeholder="금액" id="title" name="tt"></input>
-        <input type="number" placeholder="기타" id="title2" name="tt2"></input>
-        <input type="radio" name="radio" id="r1" value="1" onClick="active();" checked>금액으로 설정 (예: [값]원을 받으세요.)
-        <input type="radio" name="radio" id="r2" value="2" onClick="disable();">기타로 설정 (예: [값] 받으세요.)
+        <textarea low="10" placeholder="금액" id="title" name="tt"></textarea>
     </form>
     <h3>낚시할 금액을 적고, 카카오톡 아이콘을 눌러주세요</h3>
-    <p>친구에게 당하셨다구요? 나만 당할 순 없지! 다른 친구를 낚아보세요!</p>
+    <p>친구에게 당하셨다구요? 나만 당할 순 없지! 다른 친구를 낚아보세요!<br>"[값] 받으세요." 로 나오니 100원으로 낚시 시 값에 "100원을" 이라고 적으셔야 합니다!</p>
 </body>
 
 <!-- kakao sdk 호출 -->
@@ -22,21 +19,10 @@
 <script type="text/javascript">
 
  var tit1 = document.getElementById('title');
- var tit2 = document.getElementById('title2');
- var ra1 = document.getElementById('r1');
- var ra2 = document.getElementById('r2');
- var t1Result = ra1.getAttribute("checked");
- var t2Result = ra2.getAttribute("checked");
 
  const option = {
   maximumFractionDigits: 4
  };
- const t1 =  
-    tit1.value.toLocaleString('ko-KR', option);
- const t2 =
-    t1 + "원을 받으세요."
- const t3 =  
-    tit2.value + " 받으세요."
  
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('5ee49c3e7232211454971e75815e8032');
@@ -44,29 +30,11 @@
   // SDK 초기화 여부를 판단합니다.
   console.log(Kakao.isInitialized());
  
-  function active(){
-    document.form.tt.disabled = false;
-    document.form.tt2.disabled = true;
-  }
-  function disable(){
-    document.form.tt.disabled = true;
-    document.form.tt2.disabled = false;
-  }
-  
   function kakaoShare() {
-    if(t1Result == true) {
         Kakao.Link.sendCustom({
             templateId: 65599,
             templateArgs: {
-                t: t2
-                }
-        },'custom');
-    }
-    if(t2Result == true) {
-        Kakao.Link.sendCustom({
-            templateId: 65599,
-            templateArgs: {
-                t: t3
+                t: tit1.value +" 받으세요"
                 }
         },'custom');
     }
