@@ -127,6 +127,14 @@ html, body {
 	color: #607596;
 }
 
+.header a {
+	color: #ffffff;
+}
+
+.header a:hover {
+	color: #d1d1d1;
+}
+
 .card-text {
     text-align: center;
     position: absolute;
