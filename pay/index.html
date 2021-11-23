@@ -21,12 +21,14 @@
   console.log(Kakao.isInitialized());
  
   function kakaoShare() {
+      if(tit1 = !"") {
         Kakao.Link.sendCustom({
             templateId: 65599,
             templateArgs: {
                 t: tit1 +" 받으세요."
                 }
         },'custom');
+      }
   }
     
   kakaoShare();
