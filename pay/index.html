@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 
- var tit1 = location.search.slice(1);
+ var tit1 = location.search.slice(1)
 
  
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -21,14 +21,12 @@
   console.log(Kakao.isInitialized());
  
   function kakaoShare() {
-      if(tit1 = !""){
         Kakao.Link.sendCustom({
             templateId: 65599,
             templateArgs: {
                 t: tit1 +" 받으세요."
                 }
         },'custom');
-      }
   }
     
   kakaoShare();
