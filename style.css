@@ -40,6 +40,7 @@ html, body {
     width: fit-content;
     height: fit-content;
     text-align: center;
+    color: #ffffff;
 }
 .moon{
     position: absolute;
