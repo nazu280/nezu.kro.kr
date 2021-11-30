@@ -20,8 +20,8 @@ html, body {
 }
 
 .container {
-    text-align: fixed;
-    position: absolute; right: 20px; top: 65px;
+    text-align: center;
+    position: fixed; right: 20px; top: 65px;
     z-index: 1;
 }
 /*body{
