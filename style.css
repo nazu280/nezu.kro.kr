@@ -17,6 +17,8 @@ html, body {
     margin: 0;
     overflow: hidden;
     transition: background-color 1s;
+    background-color: #242424;
+    color: #ffffff;
 }
 
 .container {
