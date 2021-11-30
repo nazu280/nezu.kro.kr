@@ -191,10 +191,11 @@ html.dark {
 } */
 
 .new {
-  background: "#f50a39";
+  background-color: #f50a39;
   height: 10px;
   width: 20px;
   border-radius: 15px;
+  align: center;
 }
 
 
