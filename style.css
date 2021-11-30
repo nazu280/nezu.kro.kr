@@ -78,7 +78,7 @@ html, body {
     justify-content: space-between;
     position: absolute;
     top: 0px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .h-right a {
@@ -163,7 +163,7 @@ a {
 ::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
-    z-index: 1;
+    z-index: 2;
 }
 
 ::-webkit-scrollbar-button {
