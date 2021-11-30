@@ -21,11 +21,7 @@ html, body {
     color: #ffffff;
 }
 
-.container {
-    text-align: center;
-    position: fixed; right: 20px; top: 65px;
-    z-index: 1;
-}
+
 /*body{
     height: 100vh;
     display: flex;
@@ -167,6 +163,7 @@ a {
 ::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
+    z-index: 1;
 }
 
 ::-webkit-scrollbar-button {
