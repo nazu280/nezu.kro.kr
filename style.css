@@ -163,7 +163,6 @@ a {
 ::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
-    z-index: 2;
 }
 
 ::-webkit-scrollbar-button {
@@ -177,8 +176,8 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #4a4d52;
-    border: 2px solid #282a2d;
+    background-color: #242424;
+    border: 2px solid #242424;
     border-radius: 10px;
 }
 
