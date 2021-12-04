@@ -30,3 +30,20 @@ document.body.removeChild(se);
 function callback(data) {
     document.getElementById('client-ip').textContent = data.ip;
 }
+
+function filter() {
+        let search = document.getElementById("search").value.toLowerCase();
+        let listInner = document.getElementsByClassName("card");
+
+        for (let i = 0; i < listInner.length; i++) {
+          text = listInner[i].getElementsByClassName("card-text");
+          newicon = listInner[i].getElementsByClassName("new");
+          if (text[0].innerHTML.toLowerCase().indexOf(search) != -1 ||
+            newicon[0].innerHTML.toLowerCase().indexOf(search) != -1
+          ) {
+            listInner[i].style.display = "flex"
+          } else {
+            listInner[i].style.display = "none"
+          }
+        }
+      }
