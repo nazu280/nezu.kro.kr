@@ -200,3 +200,17 @@ html.dark {
   position: relative;
   left: 125px;
 }
+
+.Search {
+  border-radius: 10px;
+  height: 40px;
+  border: 3px solid #98b5e3;
+  cursor: pointer;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+
+.Search:focus {
+  cursor: text;
+}
