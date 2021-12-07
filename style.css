@@ -201,11 +201,19 @@ html.dark {
   left: 125px;
 }
 
+@keyframes sea {
+  0% {
+  	width: 20%;
+  }
+  100% {
+  	width: 60%;
+  }
+}
 
 .Search {
   border-radius: 10px;
   height: 40px;
-  width: 200px;
+  width: 20%;
   border: 3px solid #98b5e3;
   cursor: pointer;
   background-color: #333333;
