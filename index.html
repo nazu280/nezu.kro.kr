@@ -22,7 +22,7 @@
     <body>
         <div class="header">
             <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a></div>
-            <input type="text" id="Search" class="Search" onkeyup="myFunction()" onblur="search()" placeholder="검색" title="검색">
+            <input type="text" id="Search" class="Search" onkeyup="myFunction()" onblur="searchout()" placeholder="검색" title="검색">
             <div class="h-right">
                 <div class="menu1"><a href="/">Home</a></div>
                 <div class="menu2"><a href="https://blog.nezu.kro.kr">blog</a></div>
@@ -99,19 +99,16 @@
 		    }
 		  }
 		}
-           function search() {
+           function searchout() {
 		   outsearch = setInterval("backAction()",0.5);
 	   }
 		
-           var i = 600;
-           var ii = 40;
+           var wi = 600;
 		
            function backAction() {    
-             if ( i > 200 && ii > 40 ) {
-               i-=3;
-               ii-=3;
-               document.getElementById('box').style.width=i + "px";
-               document.getElementById('box').style.height=ii + "px";
+             if ( wi > 200) {
+               wi-=3;
+               document.getElementById('Search').style.width=wi + "px";
              } else {
               clearInterval(outsearch); 
              }
