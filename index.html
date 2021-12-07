@@ -22,7 +22,7 @@
     <body>
         <div class="header">
             <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a></div>
-            <input type="text" id="Search" class="Search" onkeyup="myFunction()" onfocus='start();' Onblur="back();" placeholder="검색" title="검색">
+            <input type="text" id="Search" class="Search" onkeyup="myFunction()" placeholder="검색" title="검색">
             <div class="h-right">
                 <div class="menu1"><a href="/">Home</a></div>
                 <div class="menu2"><a href="https://blog.nezu.kro.kr">blog</a></div>
@@ -99,42 +99,6 @@
 		    }
 		  }
 		}
-           function start() {
-        startId = setInterval("action()",0.5);
-    }
-    // 0.5 마다 backAction() 함수 반복 실행
-    function back() {
-        startId2 = setInterval("backAction()",0.5);
-    }
-    // 텍스트 박스 넓이,높이 기본값 셋팅
-    var i = 200;
-    var ii = 40;
-    
-    function action() {    
-        if ( i <= 600 && ii <= 40 ) {
-            // 넓이, 높이가 400*200 되기 전까지 3씩 증가시켜 넓이,높이 적용
-            i+=3;
-            ii+=3;
-            document.getElementById('Search').style.width=i + "px";
-            document.getElementById('Search').style.height=ii + "px";
-        } else {
-             // 넓이, 높이가 300*200 되면 clearInterval 함수로 setInterval 반복실행 종료
-            clearInterval(startId);     
-        }
-    }
-    
-    function backAction() {    
-        if ( i > 200 && ii > 40 ) {
-            // 넓이, 높이가 300*70 되기 전까지 3씩 감소시켜 넓이,높이 적용
-            i-=3;
-            ii-=3;
-            document.getElementById('Search').style.width=i + "px";
-            document.getElementById('Search').style.height=ii + "px";
-        } else {
-            // 넓이, 높이가 300*70 되면 clearInterval 함수로 setInterval 반복실행 종료
-            clearInterval(startId2); 
-        }
-    }
         </script>
         <script type="text/javascript" src="nezu.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
