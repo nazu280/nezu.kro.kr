@@ -215,4 +215,11 @@ html.dark {
 
 .Search:focus {
   cursor: text;
+  animation-name: sea;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-play-state: running;
 }
