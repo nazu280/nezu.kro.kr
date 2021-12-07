@@ -21,7 +21,7 @@
     </head>
     <body>
         <div class="header">
-            <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a></div>
+            <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a><input onkeyup="filter()" type="text" id="value" placeholder="Type to Search"></div>
             <div class="h-right">
                 <div class="menu1"><a href="/">Home</a></div>
                 <div class="menu2"><a href="https://blog.nezu.kro.kr">blog</a></div>
@@ -84,6 +84,23 @@
 	   function copyip() {
     		var ip = document.querySelector('.copy-ip');
     		navigator.clipboard.writeText(ip.textContent)
+		   
+           function filter(){
+
+		var value, name, item, i;
+
+		value = document.getElementById("value").value.toUpperCase();
+		item = document.getElementsByClassName("item");
+
+		for(i=0;i<item.length;i++){
+		  name = item[i].getElementsByClassName("name");
+		  if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+		    item[i].style.display = "flex";
+		  }else{
+		    item[i].style.display = "none";
+		  }
+		}
+	      }
            }
         </script>
         <script type="text/javascript" src="nezu.js"></script>
