@@ -21,8 +21,9 @@
     </head>
     <body>
         <div class="header">
-            <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a><input type="text" id="Search" onkeyup="myFunction()" placeholder="검색" title="검색"></div>
+            <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a></div>
             <div class="h-right">
+		<div class="menu"><input type="text" id="Search" onkeyup="myFunction()" placeholder="검색" title="검색"></div>
                 <div class="menu1"><a href="/">Home</a></div>
                 <div class="menu2"><a href="https://blog.nezu.kro.kr">blog</a></div>
                 <div class="menu3"><a href="https://gyo.nezu.kro.kr">nezugyo</a></div>
@@ -88,7 +89,7 @@
            function myFunction() {
 		  var input = document.getElementById("Search");
 		  var filter = input.value.toLowerCase();
-		  var nodes = document.getElementsByClassName('card-text');
+		  var nodes = document.getElementsByClassName('card');
 
 		  for (i = 0; i < nodes.length; i++) {
 		    if (nodes[i].innerText.toLowerCase().includes(filter)) {
