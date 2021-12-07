@@ -201,22 +201,6 @@ html.dark {
   left: 125px;
 }
 
-@keyframes sea {
-  0% {
-  	width: 200px;
-  }
-  100% {
-  	width: 600px;
-  }
-}
-@keyframes sea2 {
-  0% {
-  	width: 600px;
-  }
-  100% {
-  	width: 200px;
-  }
-}
 
 .Search {
   border-radius: 10px;
@@ -231,11 +215,4 @@ html.dark {
 
 .Search:focus {
   cursor: text;
-  animation-name: sea;
-  animation-duration: 0.2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  animation-play-state: running;
 }
