@@ -90,10 +90,10 @@
 		var value, name, item, i;
 
 		value = document.getElementById("value").value.toUpperCase();
-		item = document.getElementsByClassName("item");
+		item = document.getElementsByClassName("card");
 
 		for(i=0;i<item.length;i++){
-		  name = item[i].getElementsByClassName("name");
+		  name = item[i].getElementsByClassName("card-text");
 		  if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
 		    item[i].style.display = "flex";
 		  }else{
