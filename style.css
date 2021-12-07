@@ -203,9 +203,11 @@ html.dark {
 
 @keyframes sea {
   0% {
+	height: 40px;
   	width: 20%;
   }
   100% {
+	height: 40px;
   	width: 60%;
   }
 }
