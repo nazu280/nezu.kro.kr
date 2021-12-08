@@ -208,6 +208,7 @@ html.dark {
 .inputDiv p{
   position: absolute;
   left: 180px;
+  top: 5px;
 }
 
 @keyframes sea {
