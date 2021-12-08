@@ -203,7 +203,7 @@ html.dark {
 
 .at {
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid #98b5e3;
   cursor: pointer;
   background-color: #333333;
