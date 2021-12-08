@@ -201,6 +201,16 @@ html.dark {
   left: 125px;
 }
 
+.at {
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #98b5e3;
+  cursor: pointer;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+
 @keyframes sea {
   0% {
 	height: 40px;
