@@ -201,16 +201,6 @@ html.dark {
   left: 125px;
 }
 
-.inputDiv {
-  position: relative;
-}
-
-.inputDiv p{
-  position: absolute;
-  left: 180px;
-  top: 5px;
-}
-
 @keyframes sea {
   0% {
 	height: 40px;
