@@ -209,6 +209,7 @@ html.dark {
   background-color: #333333;
   color: #ffffff;
   text-align: center;
+  top: 1px;
 }
 
 @keyframes sea {
