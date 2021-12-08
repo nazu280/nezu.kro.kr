@@ -204,12 +204,14 @@ html.dark {
 .at {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #98b5e3;
+  border: 1px solid #607596;
   cursor: pointer;
   background-color: #333333;
   color: #ffffff;
   text-align: center;
-  top: 1px;
+  font-size: 15px;
+  height: 20px;
+  width: 35px;
 }
 
 @keyframes sea {
