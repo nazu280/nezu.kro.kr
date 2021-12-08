@@ -201,10 +201,6 @@ html.dark {
   left: 125px;
 }
 
-.alttab {
-  color: gray;
-}
-
 @keyframes sea {
   0% {
 	height: 40px;
