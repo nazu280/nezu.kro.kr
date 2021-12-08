@@ -225,6 +225,7 @@ html.dark {
   background-color: #333333;
   color: #ffffff;
   text-align: center;
+  white-space: nowrap;
 }
 
 .Search:focus {
