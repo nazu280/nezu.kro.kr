@@ -58,6 +58,7 @@
                 	<iframe src="https://myurl.kro.kr" width="100%" height="315" frameborder="0" style="border:0">페이지가 로드되지 않았습니다.<br>https://myurl.kro.kr</iframe>
 		</p>
 		<div id="toast"></div>
+		<a href="javascript: focus()" accesskey="/">foundItem</a>
             </div>
         </div>
         <script type="text/javascript">
@@ -99,6 +100,9 @@
 		    }
 		  }
 		}
+           function focus() {
+	     document.getElementById('Search').focus();
+	   }
         </script>
         <script type="text/javascript" src="nezu.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
