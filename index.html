@@ -29,7 +29,7 @@
                 <div class="menu3"><a href="https://gyo.nezu.kro.kr">nezugyo</a></div>
             </div>
         </div>
-        <div class="main" style="overflow:auto;">
+        <div class="main" style="overflow:auto;" onscroll="SetDivPosition()">
             <div class="site">
                 <h1>이 글은 아이폰에서만 보입니다</h1>
 		<div class="at">Alt</div>
@@ -106,7 +106,21 @@
            function focus() {
 	     document.getElementById('Search').focus();
 	   }
-           
+           window.onload = function(){
+	     var strCook = document.cookie;
+	     if(strCook.indexOf("!~")!=0) {
+	     var intS = strCook.indexOf("!~");
+	     var intE = strCook.indexOf("~!");
+	     var strPos = strCook.substring(intS+2,intE);
+
+	     document.getElementById("divTest").scrollTop = strPos;
+	     }
+	    }
+	    function SetDivPosition(){
+	     var intY = document.getElementById("divTest").scrollTop;
+	     document.title = intY;
+	     document.cookie = "yPos=!~" + intY + "~!";
+	    }
         </script>
         <script type="text/javascript" src="nezu.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
