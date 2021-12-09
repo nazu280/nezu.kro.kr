@@ -113,11 +113,11 @@
 	     var intE = strCook.indexOf("~!");
 	     var strPos = strCook.substring(intS+2,intE);
 
-	     document.getElementById("divTest").scrollTop = strPos;
+	     document.getElementById("main").scrollTop = strPos;
 	     }
 	    }
 	    function SetDivPosition(){
-	     var intY = document.getElementById("divTest").scrollTop;
+	     var intY = document.getElementById("main").scrollTop;
 	     document.title = intY;
 	     document.cookie = "yPos=!~" + intY + "~!";
 	    }
