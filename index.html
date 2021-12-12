@@ -86,11 +86,6 @@
             	toastr.success('복사 성공', '아이피 주소를 복사했습니다');
  	   });
 	   
-           Object.defineProperty(console, '_commandLineAPI', {
-	     get: function () {
-	       throw '콘솔 차단' //수정
-	     }
-	   });
 		
 	   function copyip() {
     		var ip = document.querySelector('.copy-ip');
