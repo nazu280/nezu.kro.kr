@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NEZU</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="style.css">
+	<style>
+          .main {
+	    background-color: #242424;
+            color: #ffffff;	
+	  }
+	</style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <meta name="description" content="아이피 주소 확인, url 단축 등 nezu.kro.kr의 모든 기능을 간편하게 이용해보세요!">
+    </head>
+    <body>
+        <div class="header">
+            <div class="h-left"><a id="toggleTheme" link="#fff" vlink="#fff" alink="#fff">NEZU</a></div>
+            
+            <div class="h-right">
+                <div class="menu1"><a href="/">Home</a></div>
+                <div class="menu2"><a href="https://blog.nezu.kro.kr">blog</a></div>
+                <div class="menu3"><a href="https://gyo.nezu.kro.kr">nezugyo</a></div>
+            </div>
+        </div>
+        <div class="main" id="main" style="overflow:auto;" onscroll="SetDivPosition()">
+            <div class="site">
+                <h1>이 글은 아이폰에서만 보입니다</h1>
+		<div class="at">Alt</div>
+		<div class="at">/</div>
+		<br><br>
+                <input type="text" id="Search" class="Search" onkeyup="myFunction()" accesskey="/" placeholder="검색">
+		<br><hr>
+                <h2>NEZU.kro.kr</h2>
+		
+                <div class="card">
+                    <div class="card-text">해당 기기의 아이피 주소<br><span class="copy-ip" id="client-ip"></span><br><a href="javascript:copyip();" id="copy-ip">복사하기</a><br><br>현재 시각<br><div style="text-align: center;"><span id="apm"></span> <span id="clock"></span></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-text"><a href='https://nezu.kro.kr/re' target='_blank'>re</a><br><a href='https://nezu.kro.kr/url' target='_blank'>url</a><p>"nezu.kro.kr/re/?링크"<br>"nezu.kro.kr/url/?링크" 를 통해 링크나 scheme에 리디렉션할 수 있습니다.</p></div>
+                </div>
+                <div class="card">
+                    <div class="card-text"><a href='https://nezu.kro.kr/custom' target='_blank'>커스텀 카카오링크 생성기 1</a><br><a href='http://nezu.kro.kr/custom2' target='_blank'>커스텀 카카오링크 생성기 2</a><p>카카오링크를 커스텀하여 공유할 수 있습니다.</p></div>
+                </div>
+                <div class="card">
+                    <div class="card-text"><a href='https://nezu.kro.kr/kaling' target='_blank'>kaling</a><p>끝없는 반복의 굴레</p></div>
+                </div>
+		<div class="card">
+              	    <div class="card-text"><a href='https://nurl.kro.kr' target='_blank'>NURL</a><p>url 단축 서비스1<br>사이트 하단에서 이용해보세요!<br>링크를 눌러서 새 탭에서 이용하실 수도 있습니다.</p></div>
+    		</div>
+		<div class="card">
+              	    <div class="card-text"><a href='https://nul.kro.kr' target='_blank'>nul</a><p>url 단축 서비스2<br>사용 방법은 비공개입니다.<br>왜냐면 나만 쓸 거거든</p></div>
+    		</div>
+                <div class="card">
+              	    <div class="card-text"><br><br><div class="new">new</div><a href='https://nemg.kro.kr' target='_blank'>NEMG</a><p>파일 업로드, 공유 사이트<br>파일을 업로드하거나 공유할 수 있습니다.<br>(html 테스트로도 쓸수있음!!)</p></div>
+    		</div>
+		<hr>
+		<p align="middle">
+                	<iframe src="https://nurl.kro.kr" width="100%" height="315" frameborder="0" style="border:0">페이지가 로드되지 않았습니다.<br>https://myurl.kro.kr</iframe>
+		</p>
+		<div id="toast"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+    	    $('#copy-ip').on('click', function(){
+		toastr.options = {
+  			"closeButton": false,
+  			"debug": false,
+  			"newestOnTop": false,
+  			"progressBar": true,
+  			"positionClass": "toast-bottom-center",
+  			"preventDuplicates": false,
+  			"onclick": null,
+  			"showDuration": "300",
+  			"hideDuration": "1000",
+  			"timeOut": "3000",
+  			"extendedTimeOut": "1000",
+  			"showEasing": "swing",
+  			"hideEasing": "linear",
+  			"showMethod": "fadeIn",
+  			"hideMethod": "fadeOut"
+		}        
+            	toastr.success('복사 성공', '아이피 주소를 복사했습니다');
+ 	   });
+	   
+		
+	   function copyip() {
+    		var ip = document.querySelector('.copy-ip');
+    		navigator.clipboard.writeText(ip.textContent)
+	   }
+           function myFunction() {
+		  var input = document.getElementById("Search");
+		  var filter = input.value.toLowerCase();
+		  var nodes = document.getElementsByClassName('card');
+
+		  for (i = 0; i < nodes.length; i++) {
+		    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+		      nodes[i].style.display = "inline-block";
+		    } else {
+		      nodes[i].style.display = "none";
+		    }
+		  }
+		}
+           function focus() {
+	     document.getElementById('Search').focus();
+	   }
+           window.onload = function(){
+	     var strCook = document.cookie;
+	     if(strCook.indexOf("!~")!=0) {
+	     var intS = strCook.indexOf("!~");
+	     var intE = strCook.indexOf("~!");
+	     var strPos = strCook.substring(intS+2,intE);
+
+	     document.getElementById("main").scrollTop = strPos;
+	     }
+	    }
+	    function SetDivPosition(){
+	     var intY = document.getElementById("main").scrollTop;
+	     document.title = "NEZUㅣY" + intY;
+	     document.cookie = "yPos=!~" + intY + "~!";
+	    }
+        </script>
+        <script type="text/javascript" src="nezu.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>
