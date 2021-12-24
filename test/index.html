@@ -18,12 +18,14 @@
       }
     </style>
     <script>
-      if (document.readyState == "complete") {
-        location.href='https://nemg.kro.kr'
+      function reload(){
+        if (document.readyState == "complete") {
+          location.href='https://nemg.kro.kr'
+        }
       }
     </script>
   </head>
-  <body>
+  <body onload="reload();">
     <div id="test">
       <p>와샌즈</p>
     </div>
