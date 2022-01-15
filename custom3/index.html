@@ -1,0 +1,58 @@
+<html>
+<title>커스텀 카카오링크 생성기 3</title>
+<meta property="og:title" content="커스텀 카카오링크 생성기 3" />
+<meta property="og:description" content="커스텀 카카오링크를 만들어 공유해보세요!" />
+<body>
+    <a id="kakao-link-btn" href="javascript:kakaoShare()">
+    	<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120">
+    </a><hr>
+    <form>
+        <textarea placeholder="타이틀" rows="10" id="title"></textarea>
+        <textarea placeholder="설명" rows="10" id="des"></textarea>
+        <textarea placeholder="이미지 링크" rows="10" id="img"></textarea>
+        <textarea placeholder="버튼 이름" rows="10" id="but"></textarea>
+        <textarea placeholder="버튼 링크" rows="10" id="btlk"></textarea>
+    </form>
+    <h3>값을 입력하고 카카오톡 아이콘을 누르면 커스텀 카카오링크를 생성, 공유할 수 있습니다.</h3>
+</body>
+
+<!-- kakao sdk 호출 -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+<script type="text/javascript">
+
+ var t=document.getElementById("title");
+ var d=document.getElementById("des");
+ var i=document.getElementById("img");
+ var b=document.getElementById("but");
+ var l=document.getElementById("btlk");
+
+  // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+  Kakao.init('5ee49c3e7232211454971e75815e8032');
+
+  // SDK 초기화 여부를 판단합니다.
+  console.log(Kakao.isInitialized());
+
+  function kakaoShare() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: t.value,
+        description: d.value,
+        imageUrl: i.value,
+        
+      },
+      buttons: [
+        {
+          title: b.value,
+          link: {
+            mobileWebUrl: l.value,
+            webUrl: l.value,
+          },
+        },
+      ],
+      // 카카오톡 미설치 시 카카오톡 설치 경로이동
+      installTalk: true,
+    })
+  }
+</script></html>
