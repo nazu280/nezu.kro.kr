@@ -11,3 +11,11 @@ html, body {
   background-color: #242424;
   color: #ffffff;
 }
+
+.main a {
+	color: #98b5e3;
+}
+
+.main a:hover {
+	color: #607596;
+}
