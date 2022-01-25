@@ -117,11 +117,11 @@ html, body {
 	text-align: center;
 }
 
-#site a {
+.site a {
 	color: #98b5e3;
 }
 
-#site a:hover {
+.site a:hover {
 	color: #607596;
 }
 
