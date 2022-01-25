@@ -13,9 +13,30 @@ html, body {
 }
 
 .main a {
-	color: #98b5e3;
+  color: #98b5e3;
 }
 
 .main a:hover {
-	color: #607596;
+  color: #607596;
+}
+
+.title {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom : 3px solid black;
+}
+
+.sel {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom : 3px solid black;
+}
+
+.select {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom : 3px solid black;
 }
