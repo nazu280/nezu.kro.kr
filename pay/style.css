@@ -20,21 +20,21 @@ html, body {
   color: #607596;
 }
 
-.title {
+#title {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom : 3px solid black;
 }
 
-.sel {
+#sel {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom : 3px solid black;
 }
 
-.select {
+#select {
   border-top: none;
   border-left: none;
   border-right: none;
