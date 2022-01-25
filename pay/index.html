@@ -6,8 +6,15 @@
     <a id="kakao-link-btn" href="javascript:kakaoShare()">
     	<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120">
     </a><hr>
-    <form>
-        <textarea low="10" placeholder="금액" id="title" name="tt"></textarea>
+    <form name="form" method="post">
+        <textarea low="10" placeholder="금액" id="title" name="tt"></textarea><input name="sel" type="text" class="box" id="sel" size="10">
+        <select name="select" class="box" id="select" onChange="check();">
+            <option value="" selected>선택하세요</option>
+            <option value="을">을</option>
+            <option value="를">를</option>
+            <option value="1">직접 입력</option>
+        </select>
+        <p>받으세요.</p>
     </form>
     <h3>낚시할 금액을 적고, 카카오톡 아이콘을 눌러주세요</h3>
     <p>친구에게 당하셨다구요? 나만 당할 순 없지! 다른 친구를 낚아보세요!<br>"[값] 받으세요." 로 나오니 100원으로 낚시 시 값에 "100원을" 이라고 적으셔야 합니다!<br>2022-01-25 해당 부분은 조만간 업데이트로 더욱 간편하게 변경될 예정입니다.</p>
@@ -16,6 +23,18 @@
 <!-- kakao sdk 호출 -->
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script type="text/javascript">
+    function check(){
+        if (form.select.value == '1') {
+            form.sel.readOnly = false;
+            form.sel.value = '';
+            form.sel.focus();
+        }
+        else {
+            form.sel.readOnly = true;
+            form.sel.value = form.select.value;
+        }
+    }
+    
  var tit1 = document.getElementById('title');
  const option = {
   maximumFractionDigits: 4
