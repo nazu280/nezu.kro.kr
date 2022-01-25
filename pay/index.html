@@ -36,6 +36,7 @@
     }
     
  var tit1 = document.getElementById('title');
+ var tit01 = document.getElementById('sel');
  const option = {
   maximumFractionDigits: 4
  };
@@ -49,7 +50,7 @@
         Kakao.Link.sendCustom({
             templateId: 65599,
             templateArgs: {
-                t: tit1.value + " 받으세요."
+                t: tit1.value + tit01.value + " 받으세요."
                 }
         },'custom');
     }
