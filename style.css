@@ -1,7 +1,13 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("https://rsms.me/inter/inter.css");
     
-* {
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    transition: background-color 1s;
+    background-color: #242424;
+    color: #ffffff;
     outline: none;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -10,15 +16,6 @@
     -ms-user-select: none;
     user-select: none;
     font-family: '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo', 'Inter', 'Spoqa Han Sans', 'Segoe UI', Sans-Serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    transition: background-color 1s;
-    background-color: #242424;
-    color: #ffffff;
 }
 
 
@@ -256,6 +253,11 @@ html.dark {
   border: 3px solid #6480aa;
 }
 
-
+input, textarea {
+  -moz-user-select: auto;
+  -webkit-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
 
 
