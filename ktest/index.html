@@ -1,0 +1,33 @@
+<html>
+<title>커스텀 카카오링크 생성기 2</title>
+<meta property="og:title" content="커스텀 카카오링크 생성기 2" />
+<meta property="og:description" content="커스텀 카카오링크를 만들어 공유해보세요!" />
+<body>
+   <a id="kakao-link-btn" href="javascript:kakaoShare()">
+     <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="120" height="120"><hr>
+   </a>
+     <form>
+        <textarea placeholder="글을 입력하세요" rows="10" id="txt"></textarea>
+        <textarea placeholder="글을 입력하세요" rows="10" id="txt2"></textarea>
+    </form> 
+    <h3>글을 입력한 뒤, 카카오톡 아이콘을 눌러 공유해보세요!</h3>
+    <a href="https://forms.gle/U8BFyPxw9fjxdMZF6">사이트 접속 경로에 대한 설문입니다. 한 번만 참여해주세요!</a>
+</body>
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+	<script type='text/javascript'>
+
+          var t = document.getElementById("txt");
+          var t2 = document.getElementById("txt2");
+          Kakao.init(t2);
+          console.log(Kakao.isInitialized());
+
+          function kakaoShare() {
+	    Kakao.Link.sendDefault({
+              objectType: 'text',
+              text: t.value,
+            })
+          }
+	</script>
+</html>
